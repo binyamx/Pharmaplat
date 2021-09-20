@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/search" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@string/search"
+                app:srcCompat="@drawable/ic_search" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/medicines_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/medicines_image_view"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/medicines"
+                            app:srcCompat="@drawable/ic_medicine1" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/medicines"
+                        android:textAlignment="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/instruments_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/card3"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/instruments_image_view"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/instruments"
+                            app:srcCompat="@drawable/ic_stethoscope1" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/instruments"
+                        android:textAlignment="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/services_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/card4"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/services_image_view"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/services"
+                            app:srcCompat="@drawable/ic_doctor1" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/distributers"
+                        android:textAlignment="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vacancies_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/card2"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/vacancy_image_view"
+                            android:layout_width="18dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/vaccancy"
+                            app:srcCompat="@drawable/ic_headhunting1" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/vacancies"
+                        android:textAlignment="center" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/banner_background_light"
+                android:layout_marginLeft="20dp">
+
+                <LinearLayout
+                    android:id="@+id/featured_card_view"
+                    android:layout_width="120dp"
+                    android:layout_height="280dp"
+                    android:layout_margin="8dp"
+                    android:background="@color/banner_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/featured"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/feature_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_toEndOf="@id/featured_card_view"
+                    android:layout_toRightOf="@id/featured_card_view"
+                    android:background="@color/home_background" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/hot_deals"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/view_all"
+                        android:layout_alignParentRight="true" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hot_deals_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/most_viewed"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/view_all" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/most_viewed_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@drawable/search_market_background"-->
+<!--                android:fontFamily="sans-serif-light"-->
+<!--                android:padding="8dp"-->
+<!--                android:text="@string/popular_items_text_view"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/category_list_recycler_view" />-->
+
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recycler_view"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:columnWidth="90dp"-->
+<!--                android:gravity="center"-->
+<!--                android:horizontalSpacing="10dp"-->
+<!--                android:numColumns="auto_fit"-->
+<!--                android:stretchMode="columnWidth"-->
+<!--                android:verticalSpacing="10dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/textView" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

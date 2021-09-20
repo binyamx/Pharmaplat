@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange_red">#FF2800</color>
+    <color name="orange_red_light">#FF3d00</color>
+
+
+    <color name="card1">#d4cbe5</color>
+    <color name="card2">#7adccf</color>
+    <color name="card3">#f7c59f</color>
+    <color name="card4">#b8d7f5</color>
+
+    <color name="white">@android:color/white</color>
+    <color name="black">#000000</color>
+    <color name="ghost_white">#e9e8ef</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="home_background">#f2f5f8</color>
+    <color name="banner_background">#D5EF9D97</color>
+    <color name="banner_background_light">#56F1E9CE</color>
+
+    <color name="light_black">#292f33</color>
+
+</resources>

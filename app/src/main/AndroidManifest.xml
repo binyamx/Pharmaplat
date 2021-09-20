@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pharmaplat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Pharmaplat">
+        <activity android:name=".user.UploadPicture" />
+        <activity android:name=".user.MyProfile" />
+        <activity android:name=".ItemCatalog.CategoryMedicines" />
+        <activity android:name=".user.UserProfile" />
+        <activity android:name=".ItemCatalog.SubSubCategory" />
+        <activity android:name=".ItemCatalog.SubCategoryNames" />
+        <activity android:name=".ItemCatalog.CategoryNameList" />
+        <activity android:name=".LoginSignup.ForgetPasswordSuccessMessage" />
+        <activity android:name=".LoginSignup.SetNewPassword" />
+        <activity android:name=".LoginSignup.MakeSelection" />
+        <activity android:name=".LoginSignup.ForgetPassword" />
+        <activity android:name=".LoginSignup.SignUp3rdClass" />
+        <activity android:name=".LoginSignup.Signup2ndClass" />
+        <activity android:name=".LoginSignup.SignUp" />
+        <activity android:name=".LoginSignup.Login" />
+        <activity android:name=".LoginSignup.LoginSignup" />
+        <activity android:name=".LoginSignup.VerifyOTP" />
+        <activity android:name=".ItemCatalog.ListForOneItem" />
+        <activity android:name=".ItemCatalog.ItemsInACategory" />
+        <activity android:name=".user.WelcomeActivity" />
+        <activity android:name=".main_screen.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

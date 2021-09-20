@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_view_background">
+
+            <ImageView
+                android:id="@+id/bulk_item_image_view"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/bulk_item_image_view"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars[1]" />
+
+            <TextView
+                android:id="@+id/bulk_item_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/bulk_item_image_view"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/amphotercin_b"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/bulk_item_description_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_name_text_view"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/bulk_item_image_view"
+                android:text="@string/description_about_the_item" />
+
+            <TextView
+                android:id="@+id/bulk_item_ex_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_description_text_view"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/bulk_item_image_view"
+                android:text="@string/ex_date_08_22" />
+
+            <TextView
+                android:id="@+id/bulk_item_pice_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_ex_date_text_view"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/bulk_item_image_view"
+                android:text="@string/negotiable" />
+
+            <TextView
+                android:id="@+id/bulk_item_company_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_image_view"
+                android:layout_marginTop="8dp"
+                android:text="@string/lamark_wholesaler"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/bulk_item_company_rating_in_item"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_company_name_text_view"
+                android:rating="4.5" />
+
+            <TextView
+                android:id="@+id/target_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_company_rating_in_item"
+                android:layout_toEndOf="@id/bulk_item_company_rating_in_item"
+                android:layout_marginStart="16dp"
+                android:text="@string/target"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/target_number_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/target_text_view"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/bulk_item_company_rating_in_item"
+                android:layout_marginStart="16dp"
+                android:text="@string/_20_30"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/saving_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bulk_item_company_rating_in_item"
+                android:layout_toEndOf="@id/target_text_view"
+                android:layout_marginStart="64dp"
+                android:text="@string/saving"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/saving_amount_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/target_text_view"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/target_number_text_view"
+                android:layout_marginStart="64dp"
+                android:text="@string/_473_birr"
+                android:textSize="20sp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/join_campaign"
+                android:layout_below="@id/target_number_text_view"
+                android:layout_marginTop="8dp"
+                android:layout_alignStart="@id/target_text_view"
+                android:layout_marginStart="8dp"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

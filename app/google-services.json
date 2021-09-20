@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "265819865339",
+    "project_id": "catalix-a0b44",
+    "storage_bucket": "catalix-a0b44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265819865339:android:3192deedd6b7676ee4f05e",
+        "android_client_info": {
+          "package_name": "com.example.pharmaplat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265819865339-d19d745pcq2inue1bfoqjqeq9skjgebe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrJBEMTG1jBbMMcNs2IO-xk3O7VS5zmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265819865339-d19d745pcq2inue1bfoqjqeq9skjgebe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

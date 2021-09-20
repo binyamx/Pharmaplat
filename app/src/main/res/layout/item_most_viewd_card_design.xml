@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/most_viewed_imageView"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/zeritu"
+            android:scaleType="centerCrop"/>
+        
+        <TextView
+            android:id="@+id/most_viewed_tittle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jemal_wholesaler"
+            android:textSize="20sp"
+            android:fontFamily="@font/baloo"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/most_viewed_imageView"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/most_viewed_imageView" />
+
+        <RatingBar
+            android:id="@+id/most_viewed_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/most_viewed_tittle_text"
+            android:layout_toRightOf="@id/most_viewed_imageView"
+            android:layout_marginLeft="8dp"
+            android:rating="4"
+            android:layout_toEndOf="@id/most_viewed_imageView"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/most_viewed_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/long_text"
+            android:layout_below="@id/most_viewed_rating_bar"
+            android:layout_toRightOf="@id/most_viewed_imageView"
+            android:layout_toEndOf="@id/most_viewed_imageView"
+            android:padding="8dp"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

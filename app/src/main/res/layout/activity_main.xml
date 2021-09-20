@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main_screen.MainActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/ghost_white"
+            android:theme="@style/navigationTheme"
+            app:headerLayout="@layout/menu_header"
+            app:menu="@menu/main_menu" />
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/main_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/drawer_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/menu"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_drawer_24" />
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@id/drawer_icon"
+                    android:fontFamily="@font/muli_black"
+                    android:gravity="center_horizontal"
+                    android:text="@string/catalix"
+                    android:textSize="28sp"
+                    android:layout_toRightOf="@id/drawer_icon" />
+
+
+                <ImageView
+                    android:id="@+id/add_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/contribute"
+                    android:elevation="6dp"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_baseline_add_24"
+                    android:layout_alignParentRight="true" />
+
+
+            </RelativeLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/main_bottom_nav_bar"
+                android:layout_below="@id/main_relative_layout" />
+
+            <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+                android:id="@+id/main_bottom_nav_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_corner"
+
+                android:elevation="8dp"
+                app:bnc_mode="spread"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true">
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/feed_bottom_nav_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_active="true"
+                    app:bt_colorActive="@color/orange_red_light"
+                    app:bt_colorInactive="@color/light_black"
+                    app:bt_icon="@drawable/ic_round_feed_24"
+                    app:bt_shape="@drawable/round_corner"
+                    app:bt_title="@string/feed"
+                    app:bt_padding="4dp"
+                    app:bt_titlePadding="4dp"/>
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/market_bottom_nav_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_active="true"
+                    app:bt_colorActive="@color/orange_red_light"
+                    app:bt_colorInactive="@color/light_black"
+                    app:bt_icon="@drawable/ic_round_home_24"
+                    app:bt_shape="@drawable/round_corner"
+                    app:bt_title="@string/market"
+                    app:bt_padding="4dp"
+                    app:bt_titlePadding="4dp"/>
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/demand_bottom_nav_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_active="true"
+                    app:bt_colorActive="@color/orange_red_light"
+                    app:bt_colorInactive="@color/light_black"
+                    app:bt_icon="@drawable/ic_round_demand_24"
+                    app:bt_shape="@drawable/round_corner"
+                    app:bt_title="@string/demand"
+                    app:bt_padding="4dp"
+                    app:bt_titlePadding="4dp"/>
+
+            </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+        </RelativeLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

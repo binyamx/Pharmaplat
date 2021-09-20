@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/market"
+            android:icon="@drawable/ic_round_home_24"/>
+
+        <item
+            android:id="@+id/nav_feed"
+            android:title="@string/feed"
+            android:icon="@drawable/ic_round_feed_24"/>
+
+        <item
+            android:id="@+id/nav_demand"
+            android:title="@string/demand"
+            android:icon="@drawable/ic_round_demand_24"/>
+
+        <item
+            android:id="@+id/nav_categories"
+            android:title="@string/categories"
+            android:icon="@drawable/ic_round_dashboard_24"/>
+
+
+    </group>
+
+    <item android:title="@string/profile">
+
+        <menu >
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_signIn"
+                    android:title="@string/signin"
+                    android:icon="@drawable/ic_round_home_24"/>
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="@string/profile"
+                    android:icon="@drawable/ic_round_feed_24"/>
+
+                <item
+                    android:id="@+id/nav_signOut"
+                    android:title="@string/sign_out"
+                    android:icon="@drawable/ic_round_demand_24"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/categories">
+
+        <menu >
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_pharmaceuticals"
+                    android:title="@string/pharmaceuticals"
+                    android:icon="@drawable/ic_round_home_24"/>
+
+                <item
+                    android:id="@+id/nav_instruments"
+                    android:title="@string/instruments"
+                    android:icon="@drawable/ic_round_feed_24"/>
+
+                <item
+                    android:id="@+id/nav_services"
+                    android:title="@string/services"
+                    android:icon="@drawable/ic_round_feed_24"/>
+
+                <item
+                    android:id="@+id/nav_vacancy"
+                    android:title="@string/vacancy"
+                    android:icon="@drawable/ic_round_demand_24"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/share">
+
+        <menu >
+
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/share"
+                    android:icon="@drawable/ic_round_home_24"/>
+
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/rate_us"
+                    android:icon="@drawable/ic_round_feed_24"/>
+
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

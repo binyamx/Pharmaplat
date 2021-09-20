@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/category_title_linear_layout"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/category_names_recycler_background"
+    android:orientation="vertical"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/category_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fluid_electrolyte_and_acid_base_balance_medicines"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxWidth="155dp"
+        android:minWidth="100dp"
+        android:paddingTop="16dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        />
+
+
+
+</LinearLayout>

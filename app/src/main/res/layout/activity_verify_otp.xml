@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginSignup.VerifyOTP"
+    android:background="@color/white"
+    android:transitionName="transition_verify_btn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_close_24"
+            app:tint="@color/black"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_black"
+            android:text="@string/code"
+            android:textColor="@color/black"
+            android:textSize="75sp"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_black"
+            android:text="@string/verification"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"/>
+
+        <TextView
+            android:id="@+id/enter_sms_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli"
+            android:text="@string/enter_one_time_sms"
+            android:textAlignment="center"
+            android:layout_marginTop="48dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemCount="6"
+            app:itemWidth="40dp"
+            android:height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="30dp"
+            app:lineColor="@color/black"
+            android:itemBackground="@color/white"
+            style="@style/PinWidget.PinView"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:cursorColor="@color/black"
+            app:hideLineWhenFilled="true"
+            app:itemRadius="5dp"/>
+
+        <Button
+            android:id="@+id/verify_code_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="@string/verify_code"
+            android:layout_marginTop="30dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

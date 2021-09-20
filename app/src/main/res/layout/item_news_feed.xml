@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_circle_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/asa"
+                android:layout_marginLeft="8dp" />
+
+
+            <TextView
+                android:id="@+id/user_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/user_circle_image_view"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text="@string/long_text"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/user_circle_image_view" />
+
+
+            <ImageView
+                android:id="@+id/message_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_below="@id/user_name_text_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/photo_message"
+                android:maxWidth="300dp"
+                android:maxHeight="300dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/zeritu"
+                android:layout_marginRight="8dp" />
+
+
+            <TextView
+                android:id="@+id/message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:maxWidth="300dp"
+                android:maxLines="4"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/long_text" />
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/mute"
+                app:srcCompat="@drawable/ic_mute"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message_text_view"
+                android:layout_alignStart="@id/user_circle_image_view"
+                android:layout_alignEnd="@id/mute"
+                android:layout_alignLeft="@id/user_circle_image_view"
+                android:layout_alignRight="@id/mute"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/general_chat_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_light"
+                    android:text="@string/chat"
+                    android:textAllCaps="false"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/general_comment_button"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/rubik_light"
+                    android:text="@string/comment"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="8dp" />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

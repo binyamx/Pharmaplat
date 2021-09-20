@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/card1">
+
+        <TextView
+            android:id="@+id/hot_deals_tittle"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/long_text"
+            android:textSize="20sp"
+            android:fontFamily="@font/baloo"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/hot_deals_description"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/long_text"
+            android:textSize="15sp"
+            android:fontFamily="@font/muli"
+            android:layout_below="@id/hot_deals_tittle"/>
+
+        <ImageView
+            android:id="@+id/hot_deals_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/zeritu"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/picture_of_the_hot_deal" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

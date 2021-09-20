@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/feed_bottom_nav_bar"
+        android:title="@string/feed"
+        android:icon="@drawable/ic_round_feed_24" />
+
+    <item
+        android:id="@+id/market_bottom_nav_bar"
+        android:title="@string/market"
+        android:icon="@drawable/ic_round_home_24"/>
+
+    <item
+        android:id="@+id/demand_bottom_nav_bar"
+        android:title="@string/demand"
+        android:icon="@drawable/ic_round_demand_24"/>
+
+
+</menu>
