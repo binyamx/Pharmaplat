@@ -35,7 +35,7 @@ class FinalCategoryAdapter(
     private lateinit var  loadFinalRecycler: LoadFinalRecycler
     private lateinit var createPostDialog: Dialog
     private lateinit var context: Context
-    private val  tax = "jdfijerfh rsdgf"
+
 
     // Firebase
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
