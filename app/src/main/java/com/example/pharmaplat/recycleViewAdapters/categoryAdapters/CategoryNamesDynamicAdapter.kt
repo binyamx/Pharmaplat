@@ -37,7 +37,6 @@ class CategoryNamesDynamicAdapter(
         holder.viewDataBinding.finalCategoryRecyclerView.apply {
             adapter = FinalCategoryAdapter(
                 subCategoryData[position].finalCategoryList,
-                this@CategoryNamesDynamicAdapter,
                 screenName
             )
             setOnClickListener {  }

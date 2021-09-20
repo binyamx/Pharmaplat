@@ -193,7 +193,7 @@ use if you don’t have a scale for a more accurate weight measurement (don’t 
     <string name="description_optional">Description (Optional)</string>
     <string name="add_picture">Add Picture</string>
     <string name="post">Post</string>
-    <string name= "category_name">%1$S Category</string>
+    <string name="category_name">%1$S Category</string>
     <string name="cancel_post">Cancel Post</string>
 
 
