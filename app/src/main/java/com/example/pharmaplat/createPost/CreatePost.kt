@@ -16,10 +16,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.util.*
-
+private const val TAG = "CreatePost"
 class CreatePost : AppCompatActivity() {
 
-    private val TAG = "CreatePost"
+
 
     private lateinit var dialog: Dialog
 
@@ -91,7 +91,7 @@ class CreatePost : AppCompatActivity() {
 
         // Firebase storage for post image
         storageReference = FirebaseStorage.getInstance()
-            .getReference("Posts" +user?.uid + postTitle+ ".jpg" )
+            .getReference("Products/" +user?.uid + postTitle+ ".jpg" )
 
         storageReference.putFile(pictureUri!!).addOnCompleteListener { it ->
             if (it.isSuccessful) {
@@ -112,14 +112,15 @@ class CreatePost : AppCompatActivity() {
 
     }
 
-    private fun addToFireStore(postTitle: String, postDetail: String, categoryName: String, photoDownloadUri: String) {
+    private fun addToFireStore(postTitle: String, postDescription: String, categoryName: String, photoDownloadUri: String) {
 
         val searchKeyWords = generateSearchKeyWords(postTitle)
 
         val postMap = hashMapOf(
             "categoryName" to categoryName,
-            "postTitle" to postTitle,
-            "postDetail" to postDetail,
+            "productTitle" to postTitle,
+            "productDescription" to postDescription,
+            "uid" to user!!.uid,
             "photoDownloadUri" to photoDownloadUri,
             "searchKeyWords" to searchKeyWords,
         )

@@ -195,6 +195,7 @@ use if you don’t have a scale for a more accurate weight measurement (don’t 
     <string name="post">Post</string>
     <string name="category_name">%1$S Category</string>
     <string name="cancel_post">Cancel Post</string>
+    <string name="search_for_products">Search for Products...</string>
 
 
 </resources>

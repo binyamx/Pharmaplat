@@ -38,8 +38,8 @@ class MarketAdapter(private var postList: MutableList<GeneralPostData>)
         private  var reviewRating: RatingBar
         private  var reviewAmount: TextView
         private  var postTittle: TextView
-        private  var postDescription: TextView
-        private  var userPicture: ImageView
+//        private  var postDescription: TextView
+//        private  var userPicture: ImageView
         private  var postPicture: ImageView
         private lateinit var postList: GeneralPostData
 
@@ -50,8 +50,8 @@ class MarketAdapter(private var postList: MutableList<GeneralPostData>)
             reviewRating = v.findViewById(R.id.general_post_profile_rating)
             reviewAmount = v.findViewById(R.id.general_post_profile_amount_of_raters)
             postTittle = v.findViewById(R.id.general_post_title_text_view)
-            postDescription = v.findViewById(R.id.general_post_detail_text_view)
-            userPicture = v.findViewById(R.id.general_user_circle_image_view)
+//            postDescription = v.findViewById(R.id.general_post_detail_text_view)
+//            userPicture = v.findViewById(R.id.general_user_circle_image_view)
             postPicture = v.findViewById(R.id.general_post_image_view)
 
         }
@@ -63,8 +63,8 @@ class MarketAdapter(private var postList: MutableList<GeneralPostData>)
             reviewRating.rating = postList.reviewRating!!
             reviewAmount.text = postList.reviewAmount.toString()
             postTittle.text = postList.postTitle
-            postDescription.text = postList.postDetail
-            postList.userPicture?.let { userPicture.setImageResource(it) }
+//            postDescription.text = postList.postDetail
+//            postList.userPicture?.let { userPicture.setImageResource(it) }
             postList.postPicture?.let { postPicture.setImageResource(it) }
 
         }

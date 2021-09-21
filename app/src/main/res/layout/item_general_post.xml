@@ -23,13 +23,13 @@
             android:layout_marginLeft="8dp">
 
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/general_user_circle_image_view"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/zeritu"
-                android:layout_marginLeft="8dp" />
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/general_user_circle_image_view"-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:src="@drawable/zeritu"-->
+<!--                android:layout_marginLeft="8dp" />-->
 
 
             <TextView
@@ -84,6 +84,7 @@
             android:layout_below="@id/profile_linear_layout"
             android:layout_margin="8dp">
 
+
             <ImageView
                 android:id="@+id/general_post_image_view"
                 android:layout_width="wrap_content"
@@ -101,8 +102,8 @@
                 android:id="@+id/general_post_title_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/general_post_image_view"
                 android:layout_marginBottom="4dp"
+                android:layout_below="@id/general_post_image_view"
                 android:ellipsize="end"
                 android:fontFamily="@font/muli"
                 android:maxLines="1"
@@ -110,15 +111,28 @@
                 android:textColor="@color/light_black"
                 android:textSize="16sp" />
 
+<!--            <TextView-->
+<!--                android:id="@+id/general_post_title_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/general_post_image_view"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:fontFamily="@font/muli"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="@string/long_text"-->
+<!--                android:textColor="@color/light_black"-->
+<!--                android:textSize="16sp" />-->
 
-            <TextView
-                android:id="@+id/general_post_detail_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/general_post_title_text_view"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:text="@string/long_text" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/general_post_detail_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/general_post_image_view"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="2"-->
+<!--                android:text="@string/long_text" />-->
 
 
         </RelativeLayout>
