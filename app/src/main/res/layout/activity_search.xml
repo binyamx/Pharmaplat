@@ -4,61 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".search.Search"
-    android:padding="16dp">
+    tools:context=".search.Search">
 
-
-    <RelativeLayout
-        android:id="@+id/search_relative_layout"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_edit_text_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:elevation="8dp"
+        android:hint="@string/search_for_products"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_search"
+        android:textColorHint="@color/text_color_primary_dark"
+        app:boxStrokeColor="@color/text_color_primary_dark"
+        app:endIconTint="@color/text_color_primary_dark"
+        app:hintTextColor="@color/text_color_primary_dark"
+        app:startIconTint="@color/text_color_primary_dark">
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/search_edit_text_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/search_for_products"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
-            app:hintTextColor="@color/light_black"
-            android:gravity="center_horizontal"
-            app:startIconDrawable="@drawable/ic_write_edit_24"
-            app:startIconTint="@color/black">
+            android:inputType="text" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/search_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_relative_layout"
+        app:layout_constraintTop_toBottomOf="@+id/search_edit_text_layout"
         tools:listitem="@layout/item_search" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

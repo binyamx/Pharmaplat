@@ -13,7 +13,6 @@
         android:layout_height="wrap_content">
 
 
-
         <RelativeLayout
             android:id="@+id/rlt_layout"
             android:layout_width="match_parent"

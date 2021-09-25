@@ -10,10 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.*
-import com.example.pharmaplat.ItemCatalog.CategoryMedicines
-import com.example.pharmaplat.ItemCatalog.CategoryNameList
+import com.example.pharmaplat.itemCatalog.CategoryMedicines
+import com.example.pharmaplat.itemCatalog.CategoryNameList
 import com.example.pharmaplat.R
 import com.example.pharmaplat.recycleViewAdapters.marketAdapters.*
+import com.example.pharmaplat.search.Search
 import kotlinx.android.synthetic.main.fragment_market.view.*
 
 
@@ -273,6 +274,11 @@ class Market : Fragment() {
             val intent = Intent(this.context, CategoryNameList::class.java)
             intent.putExtra("categoryTitle", "Services")
             startActivity(intent)
+        }
+
+        view.rlt_layout.setOnClickListener {
+            val intetnt = Intent(this.context, Search::class.java)
+            startActivity(intetnt)
         }
 
 

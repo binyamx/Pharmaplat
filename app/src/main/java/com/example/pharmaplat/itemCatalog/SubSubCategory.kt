@@ -1,4 +1,4 @@
-package com.example.pharmaplat.ItemCatalog
+package com.example.pharmaplat.itemCatalog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

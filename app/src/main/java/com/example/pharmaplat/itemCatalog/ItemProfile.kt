@@ -1,4 +1,4 @@
-package com.example.pharmaplat.ItemCatalog
+package com.example.pharmaplat.itemCatalog
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

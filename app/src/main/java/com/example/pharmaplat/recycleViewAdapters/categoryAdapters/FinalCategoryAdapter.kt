@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.CategoryNames
-import com.example.pharmaplat.ItemCatalog.ListForOneItem
+import com.example.pharmaplat.itemCatalog.ListForOneItem
 import com.example.pharmaplat.createPost.CreatePost
 import com.example.pharmaplat.databinding.ItemCategoryNamesBinding
 
@@ -15,13 +15,7 @@ class FinalCategoryAdapter(
 )
     :RecyclerView.Adapter<FinalCategoryAdapter.FinalCategoryViewHolder>() {
 
-//        private lateinit var context: Context
 
-
-//    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
-//        super.onAttachedToRecyclerView(recyclerView)
-//        context = recyclerView.context
-//    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

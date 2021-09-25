@@ -5,83 +5,30 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
-    android:layout_marginTop="8dp"
-    app:cardCornerRadius="2dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:id="@+id/profile_linear_layout"
-            android:layout_width="match_parent"
+        android:padding="8dp">
+        <TextView
+            android:id="@+id/user_name_general_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/lamark_wholesaler"
+            android:textColor="@color/light_black"
             android:layout_marginStart="8dp"
-            android:orientation="vertical"
-            android:layout_marginLeft="8dp">
-
-
-<!--            <de.hdodenhof.circleimageview.CircleImageView-->
-<!--                android:id="@+id/general_user_circle_image_view"-->
-<!--                android:layout_width="42dp"-->
-<!--                android:layout_height="42dp"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:src="@drawable/zeritu"-->
-<!--                android:layout_marginLeft="8dp" />-->
-
-
-            <TextView
-                android:id="@+id/user_name_general_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="@font/marko_one"
-                android:maxLines="1"
-                android:text="@string/lamark_wholesaler"
-                android:textColor="@color/light_black"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-                <RatingBar
-                    android:id="@+id/general_post_profile_rating"
-                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:progressTint="@color/orange_red_light"
-                    android:rating="3.5" />
-
-                <TextView
-                    android:id="@+id/general_post_profile_amount_of_raters"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="4"
-                    android:text="@string/_374"
-                    android:textColor="@color/light_black"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="24dp" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
+            android:layout_marginLeft="8dp"/>
 
         <RelativeLayout
             android:id="@+id/general_post_message_relative_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_linear_layout"
+            android:layout_below="@id/user_name_general_text"
             android:layout_margin="8dp">
 
 
@@ -111,63 +58,21 @@
                 android:textColor="@color/light_black"
                 android:textSize="16sp" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/general_post_title_text_view"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/general_post_image_view"-->
-<!--                android:layout_marginBottom="4dp"-->
-<!--                android:ellipsize="end"-->
-<!--                android:fontFamily="@font/muli"-->
-<!--                android:maxLines="1"-->
-<!--                android:text="@string/long_text"-->
-<!--                android:textColor="@color/light_black"-->
-<!--                android:textSize="16sp" />-->
-
-
-<!--            <TextView-->
-<!--                android:id="@+id/general_post_detail_text_view"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/general_post_image_view"-->
-<!--                android:ellipsize="end"-->
-<!--                android:maxLines="2"-->
-<!--                android:text="@string/long_text" />-->
-
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/general_post_message_relative_layout"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            >
-
-            <Button
+            <ImageButton
                 android:id="@+id/general_chat_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_light"
-                android:text="@string/chat"
+                app:srcCompat="@drawable/ic_baseline_chat_bubble_outline_24"
                 android:textAllCaps="false"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                />
-
-            <Button
-                android:id="@+id/general_comment_button"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/rubik_light"
-                android:text="@string/comment"
-                android:textAllCaps="false"
-                android:layout_marginLeft="8dp" />
+                android:layout_below="@id/general_post_title_text_view"
+                android:contentDescription="@string/chat"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp" />
+        </RelativeLayout>
 
 
-        </LinearLayout>
 
 
     </RelativeLayout>

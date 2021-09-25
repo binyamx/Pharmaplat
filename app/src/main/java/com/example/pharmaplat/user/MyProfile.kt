@@ -10,6 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.pharmaplat.DataModel.ReviewsData
 import com.example.pharmaplat.DataModel.UserProfileData
 import com.example.pharmaplat.R
@@ -25,12 +26,8 @@ import kotlinx.android.synthetic.main.dialog_update_text_field.*
 import java.io.File
 import java.util.*
 
-
-
+private const val Tag: String = "MyProfile"
 class MyProfile : AppCompatActivity() {
-
-
-    private var TAG = "MyProfile"
 
     // View Binder
     private lateinit var binding: ActivityMyProfileBinding
@@ -194,42 +191,45 @@ class MyProfile : AppCompatActivity() {
     // Download User profile Data
     private fun getUserData() {
 
-        showProgressBar()
-
         databaseReference.child(user?.uid!!).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userData = snapshot.getValue(UserProfileData::class.java)!!
                 binding.profileFullName.text = userData.fullName
                 binding.profileUserName.text = getString(R.string.userName, userData.userName)
                 binding.profileBio.text = userData.bio
-                getUserPicture()
-                hideProgressBar()
+
             }
 
             override fun onCancelled(error: DatabaseError) {
-                hideProgressBar()
+
                Toast.makeText(this@MyProfile, "Failed to get Profile Data.", Toast.LENGTH_SHORT)
                     .show()
             }
 
         })
+        getUserPicture()
     }
 
     private fun getUserPicture() {
         storageReference = FirebaseStorage.getInstance().reference.child("Users/${user?.uid}.jpg")
-
         val localFile = File.createTempFile("tempImage", "jpg")
         storageReference.getFile(localFile).addOnSuccessListener {
-
             val bitemap = BitmapFactory.decodeFile(localFile.absolutePath)
-            binding.profileImage.setImageBitmap(bitemap)
+            Glide.with(this)
+                .load(bitemap)
+                .circleCrop()
+                .placeholder(R.drawable.ic_person_24)
+                .into(binding.profileImage)
+
+        /*    binding.profileImage.setImageBitmap(bitemap)
             Log.d(TAG,it.toString())
-//            hideProgressBar()
+            hideProgressBar()*/
         }.addOnFailureListener {
 
 //            hideProgressBar()
             Toast.makeText(this, "Failed To Download Picture", Toast.LENGTH_SHORT).show()
         }
+
     }
 
 //      Progress Bar

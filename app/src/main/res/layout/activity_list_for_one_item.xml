@@ -4,35 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemCatalog.ListForOneItem"
+    tools:context=".itemCatalog.ListForOneItem"
     android:fitsSystemWindows="false">
 
     <TextView
         android:id="@+id/title_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:fontFamily="@font/arbutus"
+        android:textSize="24sp"
+        android:fontFamily="@font/muli_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:maxLines="1"
+        android:padding="8dp"
+        android:gravity="center_horizontal"
         android:text="@string/long_text"/>
 
     <RelativeLayout
         android:id="@+id/rlt_layout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginRight="40dp"
         android:background="@color/white"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/title_textView"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent="0.5"
-        android:layout_marginEnd="40dp">
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,7 +62,6 @@
 
     </RelativeLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listForOneItemRecycleView"
         android:layout_width="match_parent"
@@ -65,7 +69,22 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rlt_layout"
+        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_general_post" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_textView"
+        android:background="@drawable/bg_progress_circle"
+        android:elevation="8dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

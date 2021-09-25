@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.CatagoryList
 import com.example.pharmaplat.R
-import com.example.pharmaplat.ItemCatalog.ItemsInACategory
+import com.example.pharmaplat.itemCatalog.ItemsInACategory
 
 class CategoryListAdapter (private var categoryList: MutableList<CatagoryList>)
     :RecyclerView.Adapter<CategoryListAdapter.CatagoryViewHolder>(){

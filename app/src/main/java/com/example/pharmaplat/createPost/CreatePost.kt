@@ -125,7 +125,7 @@ class CreatePost : AppCompatActivity() {
             "searchKeyWords" to searchKeyWords,
         )
 
-        firestore.collection("Posts")
+        firestore.collection("Products")
             .add(postMap)
             .addOnSuccessListener {
 

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.Demand
 import com.example.pharmaplat.DataModel.HotDeals
 import com.example.pharmaplat.DataModel.MostViewed
-import com.example.pharmaplat.ItemCatalog.CategoryNameList
+import com.example.pharmaplat.itemCatalog.CategoryNameList
 import com.example.pharmaplat.R
 import com.example.pharmaplat.recycleViewAdapters.marketAdapters.HotDealsAdapter
 import com.example.pharmaplat.recycleViewAdapters.marketAdapters.MostViewedAdapter

@@ -8,6 +8,4 @@ data class SearchData(
     val productDescription: String? = null,
     val uid: String? = null,
     val photoDownloadUri: String? = null,
-    val userFullName: String? = null,
-    val productPictureUri: Uri? = null,
     )

@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.CategoryNames
-import com.example.pharmaplat.ItemCatalog.SubCategoryNames
-import com.example.pharmaplat.ItemCatalog.SubSubCategory
+import com.example.pharmaplat.itemCatalog.SubCategoryNames
+import com.example.pharmaplat.itemCatalog.SubSubCategory
 import com.example.pharmaplat.R
 
 class CategoryNamesAdapter(private var categoryNamesList: MutableList<CategoryNames>) :

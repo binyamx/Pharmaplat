@@ -25,12 +25,11 @@
 <!--                app:shapeAppearanceOverlay="@style/circular"/>-->
 
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/profile_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                app:srcCompat="@drawable/ic_person_24"
                 android:layerType="software"/>
 
             <ImageView

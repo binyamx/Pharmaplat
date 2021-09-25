@@ -10,8 +10,11 @@ import com.example.pharmaplat.DataModel.SearchData
 import com.example.pharmaplat.DataModel.SearchResultDataModel
 import com.example.pharmaplat.R
 
-class SearchAdapter (private var searchResultList: MutableList<SearchResultDataModel>)
+class SearchAdapter (var searchResultList: MutableList<SearchData>)
     :RecyclerView.Adapter<SearchAdapter.SearchViewHolder>(){
+
+
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -33,16 +36,12 @@ class SearchAdapter (private var searchResultList: MutableList<SearchResultDataM
     class SearchViewHolder (v: View) :RecyclerView.ViewHolder(v){
 
 
-        private lateinit var searchResultList: SearchResultDataModel
+        private lateinit var searchResultList: SearchData
 
-        private var userFullName: TextView = v.findViewById(R.id.user_full_name)
-        private var productPicture: ImageView = v.findViewById(R.id.product_image_view)
         private var productTitle: TextView = v.findViewById(R.id.product_title_text_view)
 
-        fun bind (searchResultList: SearchResultDataModel){
+        fun bind (searchResultList: SearchData){
             this.searchResultList = searchResultList
-            userFullName.text = searchResultList.fullName
-            productPicture.setImageBitmap(searchResultList.productPictureUri)
             productTitle.text = searchResultList.productTitle
         }
     }

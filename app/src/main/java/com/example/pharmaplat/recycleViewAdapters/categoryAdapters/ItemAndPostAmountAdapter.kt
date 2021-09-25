@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.ItemsAndPostAmount
-import com.example.pharmaplat.ItemCatalog.ListForOneItem
+import com.example.pharmaplat.itemCatalog.ListForOneItem
 import com.example.pharmaplat.R
 
 class CategoriesAndContentAmountAdapter(private var drugList: MutableList<ItemsAndPostAmount>) :
