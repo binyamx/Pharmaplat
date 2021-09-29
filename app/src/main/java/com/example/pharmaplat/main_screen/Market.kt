@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.*
-import com.example.pharmaplat.itemCatalog.CategoryMedicines
-import com.example.pharmaplat.itemCatalog.CategoryNameList
 import com.example.pharmaplat.R
+import com.example.pharmaplat.itemCatalog.CategoryMedicines
+
 import com.example.pharmaplat.recycleViewAdapters.marketAdapters.*
 import com.example.pharmaplat.search.Search
 import kotlinx.android.synthetic.main.fragment_market.view.*
@@ -259,21 +259,21 @@ class Market : Fragment() {
         }
 
         view.vacancies_linear_layout.setOnClickListener {
-            val intent = Intent(this.context, CategoryNameList::class.java)
+         /*   val intent = Intent(this.context, CategoryNameList::class.java)
             intent.putExtra("categoryTitle", "Vacancies")
-            startActivity(intent)
+            startActivity(intent)*/
         }
 
         view.instruments_linear_layout.setOnClickListener {
-            val intent = Intent(this.context, CategoryNameList::class.java)
+            /*val intent = Intent(this.context, CategoryNameList::class.java)
             intent.putExtra("categoryTitle", "Instruments")
-            startActivity(intent)
+            startActivi*/
         }
 
         view.services_linear_layout.setOnClickListener {
-            val intent = Intent(this.context, CategoryNameList::class.java)
+        /*    val intent = Intent(this.context, CategoryNameList::class.java)
             intent.putExtra("categoryTitle", "Services")
-            startActivity(intent)
+            startActivity(intent)*/
         }
 
         view.rlt_layout.setOnClickListener {

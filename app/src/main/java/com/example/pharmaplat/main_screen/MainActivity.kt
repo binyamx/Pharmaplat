@@ -15,10 +15,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.pharmaplat.itemCatalog.CategoryMedicines
 import com.example.pharmaplat.LoginSignup.LoginSignup
 import com.example.pharmaplat.R
 import com.example.pharmaplat.databinding.ActivityMainBinding
+import com.example.pharmaplat.itemCatalog.CategoryMedicines
 import com.example.pharmaplat.user.MyProfile
 import com.gauravk.bubblenavigation.BubbleNavigationConstraintView
 import com.google.android.material.navigation.NavigationView

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pharmaplat">
-        <activity android:name=".search.Search"/>
+        <activity android:name=".itemCatalog.ProductProfile"></activity>
+        <activity android:name=".search.Search" />
         <activity android:name=".createPost.CreatePost" />
         <activity android:name=".GetImage" />
         <activity android:name=".user.UploadPicture" />
@@ -33,11 +34,10 @@
         <activity android:name=".LoginSignup.Login" />
         <activity android:name=".LoginSignup.LoginSignup" />
         <activity android:name=".LoginSignup.VerifyOTP" />
-        <activity android:name=".itemCatalog.ListForOneItem" />
+        <activity android:name=".itemCatalog.ProductsInFinalCategory" />
         <activity android:name=".itemCatalog.ItemsInACategory" />
         <activity android:name=".user.WelcomeActivity" />
         <activity android:name=".main_screen.MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

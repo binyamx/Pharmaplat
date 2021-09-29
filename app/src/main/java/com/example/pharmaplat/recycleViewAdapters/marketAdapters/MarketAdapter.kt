@@ -7,10 +7,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.pharmaplat.CellClickListener
 import com.example.pharmaplat.DataModel.BrowsableItemData
 import com.example.pharmaplat.R
 
-class MarketAdapter( var postList: MutableList<BrowsableItemData>)
+class MarketAdapter(
+    var postList: MutableList<BrowsableItemData>
+    , private var cellClickListener: CellClickListener)
     : RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -26,6 +29,10 @@ class MarketAdapter( var postList: MutableList<BrowsableItemData>)
     override fun onBindViewHolder(holder: MarketViewHolder, position: Int) {
         val item = postList[position]
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            cellClickListener.OnClickListener(position)
+        }
     }
 
     override fun getItemCount(): Int = postList.size

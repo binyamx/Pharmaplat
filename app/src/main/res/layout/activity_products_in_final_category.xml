@@ -4,25 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".itemCatalog.ListForOneItem"
+    tools:context=".itemCatalog.ProductsInFinalCategory"
     android:fitsSystemWindows="false">
 
     <TextView
         android:id="@+id/title_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:fontFamily="@font/muli_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:maxLines="1"
         android:padding="8dp"
         android:gravity="center_horizontal"
         android:text="@string/long_text"/>
 
     <RelativeLayout
-        android:id="@+id/rlt_layout"
+        android:id="@+id/search_rlt_layout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -37,6 +36,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
         >
 
         <TextView
@@ -67,11 +67,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rlt_layout"
+        app:layout_constraintTop_toBottomOf="@+id/search_rlt_layout"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_general_post" />
 

@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.CategoryNames
-import com.example.pharmaplat.itemCatalog.SubCategoryNames
-import com.example.pharmaplat.itemCatalog.SubSubCategory
+
 import com.example.pharmaplat.R
+
 
 class CategoryNamesAdapter(private var categoryNamesList: MutableList<CategoryNames>) :
     RecyclerView.Adapter<CategoryNamesAdapter.CategoryNamesViewHolder>() {
@@ -65,28 +65,6 @@ class CategoryNamesAdapter(private var categoryNamesList: MutableList<CategoryNa
 
             // Here we send sub-categoryless catagory-names directly to subSubCategory
 
-            if (categoryNamesList.name == "Gynecological and Obstetrics Medications" ||
-                categoryNamesList.name == "Immunomodulators" ||
-                categoryNamesList.name == "Benign Prostate Hyperplasia Medicines" ||
-                categoryNamesList.name == "Ear, Nose and Throat Preparations" ||
-                categoryNamesList.name == "Vaccines" ||
-                categoryNamesList.name == "Sera and Immunoglobulin" ||
-                categoryNamesList.name == "Poisoning Antidotes and other Substances" ||
-                categoryNamesList.name == "Radiocontrast Media" ||
-                categoryNamesList.name == "Miscellaneous"
-            ) {
-
-                val intent = Intent(context, SubSubCategory::class.java)
-                intent.putExtra("subCategoryClicked", categoryNamesList.name)
-                context.startActivity(intent)
-
-            } else {
-
-                val intent = Intent(context, SubCategoryNames::class.java)
-                intent.putExtra("categoryClicked", categoryNamesList.name)
-                context.startActivity(intent)
-
-            }
 
 
         }

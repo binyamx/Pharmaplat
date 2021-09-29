@@ -12,7 +12,7 @@ class CategoryNamesDynamicAdapter(
     private var subCategoryData: MutableList<SubCategoryData>,
     private val screenName: String,
     ) :
-    RecyclerView.Adapter<CategoryNamesDynamicAdapter.CategoryNamesDynamicViewHolder>(), CellClickListener{
+    RecyclerView.Adapter<CategoryNamesDynamicAdapter.CategoryNamesDynamicViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -39,7 +39,7 @@ class CategoryNamesDynamicAdapter(
                 subCategoryData[position].finalCategoryList,
                 screenName
             )
-            setOnClickListener {  }
+
         }
 
 
@@ -50,8 +50,6 @@ class CategoryNamesDynamicAdapter(
     class CategoryNamesDynamicViewHolder(val viewDataBinding: ItemSubCategoryReyclerviewBinding) :
         RecyclerView.ViewHolder(viewDataBinding.root)
 
-    override fun OnClickListener(cell: CategoryNames) {
-        TODO("Not yet implemented")
-    }
+
 
 }

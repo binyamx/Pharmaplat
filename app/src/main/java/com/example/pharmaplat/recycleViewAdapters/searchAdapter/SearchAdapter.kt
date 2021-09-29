@@ -6,11 +6,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pharmaplat.CellClickListener
 import com.example.pharmaplat.DataModel.SearchData
 import com.example.pharmaplat.DataModel.SearchResultDataModel
 import com.example.pharmaplat.R
 
-class SearchAdapter (var searchResultList: MutableList<SearchData>)
+class SearchAdapter (
+    var searchResultList: MutableList<SearchData>,
+     private var cellClickListener: CellClickListener)
     :RecyclerView.Adapter<SearchAdapter.SearchViewHolder>(){
 
 
@@ -29,6 +32,10 @@ class SearchAdapter (var searchResultList: MutableList<SearchData>)
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
        val item = searchResultList[position]
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            cellClickListener.OnClickListener(position)
+        }
     }
 
     override fun getItemCount(): Int = searchResultList.size

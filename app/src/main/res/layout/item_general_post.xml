@@ -43,7 +43,7 @@
                 android:maxHeight="300dp"
                 android:padding="8dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/fiction_ten" />
+                app:srcCompat="@drawable/ic_baseline_photo_24" />
 
             <TextView
                 android:id="@+id/general_post_title_text_view"

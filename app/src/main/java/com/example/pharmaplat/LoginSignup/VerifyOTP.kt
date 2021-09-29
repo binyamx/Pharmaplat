@@ -108,7 +108,7 @@ class VerifyOTP : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
 
-                    storeNewUsersData(
+                /*    storeNewUsersData(
                         fullName.toString(),
                         userName.toString(),
                         phoneNumber.toString(),
@@ -116,6 +116,15 @@ class VerifyOTP : AppCompatActivity() {
                         accountType.toString(),
                         profileBio.toString(),
                         )
+                    */
+                    uploadPicture(
+                        fullName,
+                        userName,
+                        phoneNumber,
+                        passWord,
+                        accountType,
+                        profileBio
+                    )
 
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
@@ -136,46 +145,61 @@ class VerifyOTP : AppCompatActivity() {
 
     }
 
-    private fun storeNewUsersData(
-        fullName: String, userName: String,
-        phoneNumber: String, passWord: String, accountType: String, profileBio: String,
-
-    ) {
-
-        showProgressBar()
-        val addNewUser = UserProfileData(fullName, userName, phoneNumber, passWord, accountType, profileBio)
-        Log.i(TAG, "$addNewUser")
-        database = FirebaseDatabase.getInstance().getReference("Users")
-        user?.uid?.let {
-            database.child(it).setValue(addNewUser).addOnSuccessListener {
-                Toast.makeText(this, "Successfully saved!", Toast.LENGTH_SHORT).show()
-                Log.d(TAG, "Successfully saved!")
-            }.addOnFailureListener {
-                Toast.makeText(this, "Failed to save data!", Toast.LENGTH_SHORT).show()
-                Log.d(TAG, "Failed to save data!")
-            }
-        }
-        uploadPicture(userPicture)
-
-
-
-    }
-
-    private fun uploadPicture(userPicture: Uri?){
+    private fun uploadPicture(fullName: String?, userName: String?, phoneNumber: String?,
+                              passWord: String?, accountType: String?, profileBio: String?) {
 
         storageReference = FirebaseStorage.getInstance()
             .getReference("Users/" + user?.uid + ".jpg")
         storageReference.putFile(userPicture!!).addOnSuccessListener {
-            Toast.makeText(this, "Photo uploaded successfully.", Toast.LENGTH_SHORT).show()
-            hideProgressBar()
+
+            storageReference.downloadUrl.addOnSuccessListener {
+                val downloadUri = it.toString()
+                storeNewUsersData(
+                    fullName!!,
+                    userName!!,
+                    phoneNumber!!,
+                    passWord!!,
+                    accountType!!,
+                    profileBio!!,
+                    downloadUri
+                )
+            }
 
 
         }.addOnFailureListener {
-            Toast.makeText(this, "Uploading Photo Failed. Please try Again.", Toast.LENGTH_LONG)
+            Toast.makeText(this, "Uploading Photo Data. Please try Again.", Toast.LENGTH_LONG)
                 .show()
             hideProgressBar()
         }
+
     }
+
+    private fun storeNewUsersData(
+        fullName: String, userName: String,
+        phoneNumber: String, passWord: String, accountType: String, profileBio: String,
+        profilePicture: String
+
+    ) {
+
+        showProgressBar()
+        val addNewUser = UserProfileData(fullName, userName, phoneNumber, passWord, accountType, profileBio, profilePicture)
+        Log.i(TAG, "$addNewUser")
+        database = FirebaseDatabase.getInstance().getReference("Users")
+        database.child(user!!.uid).setValue(addNewUser).addOnSuccessListener {
+            hideProgressBar()
+            Toast.makeText(this, "Successfully saved!", Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "Successfully saved!")
+        }.addOnFailureListener {
+
+            hideProgressBar()
+            Toast.makeText(this, "Failed to save data!", Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "Failed to save data!")
+        }
+
+
+
+    }
+
 
     // Progress dialog
     private fun showProgressBar() {

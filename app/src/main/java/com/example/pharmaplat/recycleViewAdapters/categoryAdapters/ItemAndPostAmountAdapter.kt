@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.ItemsAndPostAmount
-import com.example.pharmaplat.itemCatalog.ListForOneItem
+import com.example.pharmaplat.itemCatalog.ProductsInFinalCategory
 import com.example.pharmaplat.R
 
 class CategoriesAndContentAmountAdapter(private var drugList: MutableList<ItemsAndPostAmount>) :
@@ -44,7 +44,7 @@ class CategoriesAndContentAmountAdapter(private var drugList: MutableList<ItemsA
 
         override fun onClick(v: View?) {
             val context = itemView.context!!
-            val intent = Intent(context, ListForOneItem::class.java)
+            val intent = Intent(context, ProductsInFinalCategory::class.java)
             intent.putExtra("ClickedItemName", drugList.name)
             context.startActivity(intent)
         }

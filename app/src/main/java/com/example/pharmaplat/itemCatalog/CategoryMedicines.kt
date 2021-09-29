@@ -12,15 +12,14 @@ import com.example.pharmaplat.UpdateRecyclerView
 import com.example.pharmaplat.databinding.ActivityCategoryMedicinesBinding
 import com.example.pharmaplat.recycleViewAdapters.categoryAdapters.CategoryNamesDynamicAdapter
 import com.example.pharmaplat.recycleViewAdapters.categoryAdapters.MainCategoryNamesStaticAdapter
+import com.example.pharmaplat.search.Search
 
-class CategoryMedicines : AppCompatActivity(), UpdateRecyclerView, CellClickListener {
+class CategoryMedicines : AppCompatActivity(), UpdateRecyclerView {
 
     private lateinit var binding: ActivityCategoryMedicinesBinding
 
     // Screen name
     private lateinit var screenName: String
-
-
 
     private lateinit var mainCategoryRecycleView: RecyclerView
     private lateinit var mainCategoryAdapter: MainCategoryNamesStaticAdapter
@@ -179,6 +178,12 @@ class CategoryMedicines : AppCompatActivity(), UpdateRecyclerView, CellClickList
         mainCategoryRecycleView.layoutManager = mainCategoryLayout
 
 
+        // Click on search place moves the screen to search screen
+
+        binding.searchEditText.setOnClickListener {
+            val intetnt = Intent(this, Search::class.java)
+            startActivity(intetnt)
+        }
     }
 
 
@@ -199,20 +204,20 @@ class CategoryMedicines : AppCompatActivity(), UpdateRecyclerView, CellClickList
 
     }
 
-    override fun OnClickListener(cell: CategoryNames) {
-        val value = intent.getStringExtra("categoryTitle")
-
-        if (value == "Medicines") {
-            val intent = Intent(this, ListForOneItem::class.java)
-            intent.putExtra("subSubCategoryClicked", cell.name.toString())
-            startActivity(intent)
-        } else {
-            val intent = Intent(this, ListForOneItem::class.java)
-            intent.putExtra("subSubCategoryClicked", "${cell.name.toString()} addPost")
-            startActivity(intent)
-        }
-
-    }
+//    override fun OnClickListener(cell: CategoryNames) {
+//        val value = intent.getStringExtra("categoryTitle")
+//
+//        if (value == "Medicines") {
+//            val intent = Intent(this, ListForOneItem::class.java)
+//            intent.putExtra("subSubCategoryClicked", cell.name.toString())
+//            startActivity(intent)
+//        } else {
+//            val intent = Intent(this, ListForOneItem::class.java)
+//            intent.putExtra("subSubCategoryClicked", "${cell.name.toString()} addPost")
+//            startActivity(intent)
+//        }
+//
+//    }
 
 
 }

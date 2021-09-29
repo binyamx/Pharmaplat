@@ -9,7 +9,7 @@ import com.example.pharmaplat.DataModel.CategoryNames
 import com.example.pharmaplat.R
 import com.example.pharmaplat.recycleViewAdapters.categoryAdapters.SubCategoryNamesAdapter
 
-class SubCategoryNames(s: String, mutableListOf: MutableList<CategoryMedicines>) : AppCompatActivity() {
+class SubCategoryNames(s: String, mutableListOf: MutableList<CategoryNames>) : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SubCategoryNamesAdapter

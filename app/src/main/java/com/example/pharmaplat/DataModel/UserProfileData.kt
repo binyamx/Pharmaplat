@@ -9,7 +9,7 @@ data class UserProfileData(
     var password: String? = null,
     var accountType: String? = null,
     var bio: String? = null,
-//    var userPicture: Uri? = null
+    var userPicture: String? = null
 //    var birthDate: String? = null,
     ){
 

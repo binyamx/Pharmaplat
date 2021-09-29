@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmaplat.DataModel.CategoryNames
-import com.example.pharmaplat.itemCatalog.ListForOneItem
+import com.example.pharmaplat.itemCatalog.ProductsInFinalCategory
 import com.example.pharmaplat.createPost.CreatePost
 import com.example.pharmaplat.databinding.ItemCategoryNamesBinding
 
@@ -35,7 +35,7 @@ class FinalCategoryAdapter(
        holder.itemView.setOnClickListener {
 
            if (screenName == "Medicines") {
-               val intent = Intent(holder.itemView.context, ListForOneItem::class.java)
+               val intent = Intent(holder.itemView.context, ProductsInFinalCategory::class.java)
                intent.putExtra("categoryName",categoryName)
                holder.itemView.context.startActivity(intent)
            } else {
